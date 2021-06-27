@@ -1,9 +1,8 @@
 #include<bits/stdc++.h>
 
-#define all(x) (x).being() (x).end()
+#define all(x) (x).being(), (x).end()
 #define pb push_back
 #define mp make_pair
-#define FILE "my_file"
 
 using namespace std;
 
