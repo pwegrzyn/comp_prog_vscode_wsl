@@ -1,0 +1,56 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++ build active file (fast)",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++17",
+                "-Wshadow",
+                "-Wall",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "${file}",
+                "-O2",
+                "-Wno-unused-result"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "detail": "compiler: /usr/bin/g++"
+        },
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++ build active file (safe)",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++17",
+                "-Wshadow",
+                "-Wall",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "${file}",
+                "-g",
+                "-fsanitize=address",
+                "-fsanitize=undefined",
+                "-D_GLIBCXX_DEBUG"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "compiler: /usr/bin/g++"
+        }
+    ],
+    "version": "2.0.0"
+}
